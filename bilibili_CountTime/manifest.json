@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Count Time",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Count How much time would you pay",
   "icons": {
     "16": "img/favicon16.png",

@@ -2,6 +2,7 @@ let control = "start";
 let controlInterval
 window.addEventListener("keyup",function (e) {
     e.preventDefault();
+    console.log(123)
     if (e.keyCode === 17){
         if (control === "start"){
             f();
@@ -18,9 +19,9 @@ window.addEventListener("keyup",function (e) {
 
 function f(){
     if (!document.querySelector(".video-episode-card__info-duration")) {
-        if (!document.querySelector(".router-link-active .clickitem .duration")) {
+        if (!document.querySelector("li .clickitem .duration")) {
         } else {
-            heji(".router-link-active .duration", ".link-content img", ".bpx-player-ctrl-time-label .bpx-player-ctrl-time-current", "viewbox_report", "#multi_page .head-con .head-left")
+            heji("li .duration", ".link-content img", ".bpx-player-ctrl-time-label .bpx-player-ctrl-time-current", "viewbox_report", "#multi_page .head-con .head-left")
         }
     } else {
         heji(".video-episode-card__info-duration", ".video-episode-card__info-title .cur-play-icon", ".bpx-player-ctrl-time-label .bpx-player-ctrl-time-current", "viewbox_report", ".first-line-left .cur-page")
@@ -33,8 +34,6 @@ function heji(a, b, c, d, e) {
         hejiMethod(a, b, c, d, e)
     }, 2000)
 }
-
-hejiMethod(".video-episode-card__info-title .cur-play-icon", ".video-episode-card__info-title .cur-play-icon", ".bpx-player-ctrl-time-label .bpx-player-ctrl-time-current", "viewbox_report", ".first-line-left .cur-page")
 
 function deleteCurrentTime(arg) {
     let deleteCurrentTime = 0

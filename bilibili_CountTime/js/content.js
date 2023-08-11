@@ -15,6 +15,15 @@ window.addEventListener("keyup",function (e) {
         }
     }
 })
+window.addEventListener("keydown", function (e) {
+    let rate = document.querySelector("video").playbackRate
+    if (e.shiftKey && e.key === "ArrowRight") {
+        rate += 0.5
+    } else if (e.shiftKey && e.key === "ArrowLeft") {
+        rate -= 0.5
+    }
+    document.querySelector("video").playbackRate = rate
+})
 
 
 function f(){
